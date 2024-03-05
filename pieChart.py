@@ -19,6 +19,9 @@ df = pd.read_excel(file_path)
 # Filter data for 'Open' status
 open_issues = df[df['Status'] == 'Open']
 
+# Exclude closed issues from open_issues
+open_issues = open_issues[open_issues['Status'] == 'Open']
+
 # Group by priority and count the number of issues
 grouped_issues = open_issues.groupby('Priority').size()
 
