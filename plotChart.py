@@ -18,12 +18,12 @@ df = pd.read_excel(excel_file_path)
 plt.figure(figsize=(10, 6))  # Set the size of the figure
 
 # Plot the data
-plt.plot(df['Value'], df['Category'], marker='o', linestyle='-')
+plt.plot(df['Issue.No'], df['Priority'], marker='o', linestyle='-')
 
 # Set the title and labels
 plt.title('Data from Excel Sheet')
-plt.xlabel('Value')
-plt.ylabel('Category')
+plt.xlabel('Issue.No')
+plt.ylabel('Priority')
 
 # Show the plot
 plt.grid(True)  # Add grid
